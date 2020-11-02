@@ -25,7 +25,8 @@
                     </div>
                     <div class="form-group">
                         <label for="status">Product Status</label>
-                        <select class="form-control" name="status">
+                        <select class="form-control" name="status" required>
+                            <option selected="" disabled="" value="">choose an option</option>
                             <option value="active">{{'Active'}}</option>
                             <option value="de-active">{{'De-Active'}}</option>
                         </select>

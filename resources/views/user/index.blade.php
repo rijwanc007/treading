@@ -6,7 +6,7 @@
                 <div class="card-body">
                     <div class="row table-responsive">
                         <div class="col-lg-12">
-                            <h2 class="text-center text-info">All User</h2><br/>
+                            <h2 class="text-center text-info">All User's</h2><br/>
                             <table class="table table-striped">
                                 <thead>
                                 <tr>

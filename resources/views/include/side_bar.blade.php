@@ -27,8 +27,8 @@
             </a>
             <div class="collapse" id="user-basic">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="{{route('user.create')}}">Create</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="{{route('user.index')}}">Index</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{route('user_create')}}">Create</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{route('user_index')}}">Index</a></li>
                 </ul>
             </div>
         </li>
@@ -40,8 +40,8 @@
             </a>
             <div class="collapse" id="product-basic">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="{{route('product.create')}}">Create</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="{{route('product.index')}}">Index</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{route('product_create')}}">Create</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{route('product_index')}}">Index</a></li>
                 </ul>
             </div>
         </li>
@@ -53,8 +53,8 @@
             </a>
             <div class="collapse" id="purchase-basic">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="{{route('user.create')}}">Create</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="{{route('user.index')}}">Index</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{route('purchase_create')}}">Create</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{route('purchase_index')}}">Index</a></li>
                 </ul>
             </div>
         </li>
@@ -157,8 +157,8 @@
             </a>
             <div class="collapse" id="dealer_account-basic">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="{{route('user.create')}}">Create</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="{{route('user.index')}}">Index</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{route('dealer_account_create')}}">Create</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{route('dealer_account_index')}}">Index</a></li>
                 </ul>
             </div>
         </li>
@@ -170,8 +170,8 @@
             </a>
             <div class="collapse" id="purchase_account-basic">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="{{route('user.create')}}">Create</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="{{route('user.index')}}">Index</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{route('purchase_account_create')}}">Create</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{route('purchase_account_index')}}">Index</a></li>
                 </ul>
             </div>
         </li>

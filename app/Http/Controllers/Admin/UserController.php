@@ -30,7 +30,7 @@ class UserController extends Controller
            'password' => bcrypt($request->password)
         ]);
         Session::flash('success','User Created Successfully');
-        return redirect()->route('user.index');
+        return redirect()->route('user_index');
     }
     public function show($id)
     {
@@ -58,13 +58,13 @@ class UserController extends Controller
             ]);
         }
         Session::flash('success','User Updated Successfully');
-        return redirect()->route('user.index');
+        return redirect()->route('user_index');
     }
     public function destroy($id)
     {
         $delete = User::find($id);
         $delete->delete();
         Session::flash('success','User Deleted Successfully');
-        return redirect()->route('user.index');
+        return redirect()->route('user_index');
     }
 }

@@ -9,7 +9,7 @@
 <script src="{{asset('assets/js/custom.js')}}"></script>
 <script src="{{asset('assets/js/file-upload.js')}}"></script>
 <script>
-    toastr.options = {"debug": false, "positionClass": "toast-top-left", "onclick": null, "fadeIn": 300, "fadeOut": 1000, "timeOut": 5000, "extendedTimeOut": 1000};
+    toastr.options = {"debug": false, "positionClass": "toast-top-right", "onclick": null, "fadeIn": 300, "fadeOut": 1000, "timeOut": 5000, "extendedTimeOut": 1000};
     @if(Session::has('success'))toastr.success("{{Session::get('success')}}");@endif
     @if(Session::has('error'))toastr.error("{{Session::get('error')}}");@endif
 </script>

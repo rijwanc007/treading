@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6">
-            <div class="page-header" id="bannerClose"><h3 class="page-title"><span class="page-title-icon bg-gradient-primary text-white mr-2"><i class="mdi mdi-package"></i></span> Edit Product</h3></div>
+            <div class="page-header" id="bannerClose"><h3 class="page-title"><span class="page-title-icon bg-gradient-primary text-white mr-2"><i class="mdi mdi-package"></i></span> Update Product</h3></div>
             <div class="card">
                 <div class="card-body">
                     <div><img class="product_image" src="{{asset('assets/images/product/'.$edit->image)}}" alt="product_image"/></div><br/>

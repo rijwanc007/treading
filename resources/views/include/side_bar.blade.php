@@ -33,6 +33,32 @@
             </div>
         </li>
         <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#dealer_account-basic" aria-expanded="false" aria-controls="ui-basic">
+                <span class="menu-title">Dealer Account</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-bag-personal menu-icon"></i>
+            </a>
+            <div class="collapse" id="dealer_account-basic">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="{{route('dealer_account_create')}}">Create</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{route('dealer_account_index')}}">Index</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#purchase_account-basic" aria-expanded="false" aria-controls="ui-basic">
+                <span class="menu-title">Purchase Account</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-bag-personal menu-icon"></i>
+            </a>
+            <div class="collapse" id="purchase_account-basic">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="{{route('purchase_account_create')}}">Create</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{route('purchase_account_index')}}">Index</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#product-basic" aria-expanded="false" aria-controls="ui-basic">
                 <span class="menu-title">Product</span>
                 <i class="menu-arrow"></i>
@@ -55,6 +81,19 @@
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"> <a class="nav-link" href="{{route('purchase_create')}}">Create</a></li>
                     <li class="nav-item"> <a class="nav-link" href="{{route('purchase_index')}}">Index</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#outlet-basic" aria-expanded="false" aria-controls="ui-basic">
+                <span class="menu-title">Outlet</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-store menu-icon"></i>
+            </a>
+            <div class="collapse" id="outlet-basic">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="{{route('user.create')}}">Create</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{route('user.index')}}">Index</a></li>
                 </ul>
             </div>
         </li>
@@ -146,32 +185,6 @@
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"> <a class="nav-link" href="{{route('user.create')}}">Create</a></li>
                     <li class="nav-item"> <a class="nav-link" href="{{route('user.index')}}">Index</a></li>
-                </ul>
-            </div>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#dealer_account-basic" aria-expanded="false" aria-controls="ui-basic">
-                <span class="menu-title">Dealer Account</span>
-                <i class="menu-arrow"></i>
-                <i class="mdi mdi-bag-personal menu-icon"></i>
-            </a>
-            <div class="collapse" id="dealer_account-basic">
-                <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="{{route('dealer_account_create')}}">Create</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="{{route('dealer_account_index')}}">Index</a></li>
-                </ul>
-            </div>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#purchase_account-basic" aria-expanded="false" aria-controls="ui-basic">
-                <span class="menu-title">Purchase Account</span>
-                <i class="menu-arrow"></i>
-                <i class="mdi mdi-bag-personal menu-icon"></i>
-            </a>
-            <div class="collapse" id="purchase_account-basic">
-                <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="{{route('purchase_account_create')}}">Create</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="{{route('purchase_account_index')}}">Index</a></li>
                 </ul>
             </div>
         </li>

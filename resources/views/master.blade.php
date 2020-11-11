@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 @include('include.head_link')
-<body>
+<body {{--oncontextmenu="return false"--}}>
+
 <div class="container-scroller">
     @include('include.header')
     <div class="container-fluid page-body-wrapper">
@@ -25,7 +26,9 @@
         </div>
     </div>
 </div>
+<a id="button"></a>
 @include('include.js')
 </body>
 </html>
+
 

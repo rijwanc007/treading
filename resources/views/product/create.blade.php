@@ -32,13 +32,7 @@
                         </select>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <br/><br/>
-    <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
+            </div><br/><br/>
             <button type="submit" class="btn btn-gradient-primary btn-lg btn-block"><i class="mdi mdi-package"></i> Create Product </button>
         </div>
     </div>

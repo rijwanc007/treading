@@ -15,6 +15,14 @@ class CreatePurchaseAccountsTable extends Migration
     {
         Schema::create('purchase_accounts', function (Blueprint $table) {
             $table->id();
+            $table->string('image')->nullable();
+            $table->string('name')->nullable();
+            $table->string('email')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('address')->nullable();
+            $table->string('due')->nullable();
+            $table->string('paid')->nullable();
+            $table->string('balance')->nullable();
             $table->timestamps();
         });
     }

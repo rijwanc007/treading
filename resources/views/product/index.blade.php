@@ -7,8 +7,8 @@
                     <div class="card-body">
                         <div class="row table-responsive">
                             <div class="col-lg-12">
-                                <h2 class="text-center text-info">All Product's</h2><br/>
-                                <table class="table table-striped">
+                                <h2 class="text-center text-info">All Product's<hr/></h2><br/>
+                                <table class="table table-striped text-center">
                                     <thead>
                                     <tr>
                                         <th> S/L </th>
@@ -34,12 +34,13 @@
                                                 <div class="modal fade" id="delete_modal_{{$product->id}}" role="dialog">
                                                     <div class="modal-dialog">
                                                         <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                <h4 class="modal-title">Delete Product</h4>
-                                                            </div>
+                                                            <div class="modal-header"><h4 class="modal-title">Delete Product</h4></div>
                                                             <div class="modal-body">
-                                                                <p>Are You Want To Delete These Product.Once You Delete These Product</p>
-                                                                <p>You Will Delete These Product Permanently</p>
+                                                                <div class="text-center">
+                                                                    Are You Want To Delete These Product.<br/>
+                                                                    Once You Delete These Product.<br/>
+                                                                    You Will Delete Product Information Permanently
+                                                                </div>
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -55,7 +56,7 @@
                                         </tr>
                                     @empty
                                         <tr>
-                                            <td colspan="7" class="text-center text-danger">{{'No Product Available'}}</td>
+                                            <td colspan="7" class="text-danger">{{'No Product Available'}}</td>
                                         </tr>
                                     @endforelse
                                     </tbody>
@@ -67,5 +68,4 @@
             </div>
         </div>
     </div>
-
 @endsection

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDealerAccountsTable extends Migration
+class CreateWarehousesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,12 @@ class CreateDealerAccountsTable extends Migration
      */
     public function up()
     {
-        Schema::create('dealer_accounts', function (Blueprint $table) {
+        Schema::create('warehouses', function (Blueprint $table) {
             $table->id();
-            $table->string('image')->nullable();
             $table->string('name')->nullable();
-            $table->string('email')->nullable();
             $table->string('phone')->nullable();
             $table->string('address')->nullable();
-            $table->string('due')->nullable();
-            $table->string('paid')->nullable();
-            $table->string('balance')->nullable();
+            $table->string('status')->nullable();
             $table->timestamps();
         });
     }
@@ -34,6 +30,6 @@ class CreateDealerAccountsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('dealer_accounts');
+        Schema::dropIfExists('warehouses');
     }
 }

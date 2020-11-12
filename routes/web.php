@@ -37,6 +37,8 @@ Route::group(['middleware' => ['preventbackbutton','auth']],function() {
     Route::get('purchase-index','Admin\PurchaseController@index')->name('purchase_index');
     Route::get('purchase-create','Admin\PurchaseController@create')->name('purchase_create');
     Route::get('/purchase_account_information/{purchase_account}','Admin\PurchaseController@purchaseAccount');
+    Route::get('/product_information/{code}','Admin\PurchaseController@productInformation');
+
     Route::resource('/outlet','Admin\OutletController');
     Route::get('outlet-index','Admin\OutletController@index')->name('outlet_index');
     Route::get('outlet-create','Admin\OutletController@create')->name('outlet_create');

@@ -251,6 +251,12 @@ hr{
 .product_code,.product_name,.product_category,.product_price,.product_quantity,.product_total_price{
     display: none;
 }
+#append_item_body{
+    display: none;
+}
+.warning_input{
+    background-color: antiquewhite;
+}
 /*back bottom to top button design */
 #button {
     display: inline-block;

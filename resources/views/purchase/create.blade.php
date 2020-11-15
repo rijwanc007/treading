@@ -221,12 +221,14 @@
             html += '<div class="row"> <div class="col-md-3"> <div class="form-group"> <label for="code_'+ i +'">Code :</label> <input type="number" class="form-control code" id="code_'+ i +'" name="code[]" required> </div></div><div class="col-md-3"> <div class="form-group"> <label for="category_'+ i +'">Category :</label><select class="form-control category" id="category_'+ i +'" name="category[]" required><option selected="" disabled="" value="">choose an option</option></select></div></div><div class="col-md-2"> <div class="form-group price"> <label for="price_'+ i +'">Price :</label> <input type="number" class="form-control price" id="price_'+ i +'" name="price[]" required> </div></div><div class="col-md-2"> <div class="form-group"> <label for="quantity_'+ i +'">Quantity :</label> <input type="number" class="form-control quantity" id="quantity_'+ i +'" name="quantity[]" required> </div></div><div class="col-md-2"> <div class="form-group"> <label for="minus_item">&nbsp;</label> <button type="button" class="form-control btn btn-danger text-center minus_item" style="border: none !important;"><i class="mdi mdi-minus menu-icon"></i></button> </div></div><div class="col-md-2 text-success product_code" id="product_code_display_'+ i +'">Code : <span id="product_code_show_'+ i +'"></span></div><div class="col-md-2 text-success product_name" id="product_name_display_'+ i +'">Name : <span id="product_name_show_'+ i +'"></span></div><div class="col-md-2 text-success product_category" id="product_category_display_'+ i +'">Category : <span id="product_category_show_'+ i +'"></span></div><div class="col-md-2 text-success product_price" id="product_price_display_'+ i +'">Price : <span id="product_price_show_'+ i +'"></span></div><div class="col-md-2 text-success product_quantity" id="product_quantity_display_'+ i +'">Quantity : <span id="product_quantity_show_'+ i +'"></span></div><div class="col-md-2 text-success product_total_price" id="product_total_price_display_'+ i +'">Total Price : <span class="product_total_price_show" id="product_total_price_show_'+ i +'"></span></div></div>';
             }
             $('#append_item').empty().append(html);
+            calculate();
         })
         $(document).on('click','#add_item',function(){
             let html = '';
             j += 1;
             html += '<div class="row"> <div class="col-md-3"> <div class="form-group"> <label for="code_'+ j +'">Code :</label> <input type="number" class="form-control code" id="code_'+ j +'" name="code[]" required> </div></div><div class="col-md-3"> <div class="form-group"> <label for="category_'+ j +'">Category :</label><select class="form-control category" id="category_'+ j +'" name="category[]" required><option selected="" disabled="" value="">choose an option</option></select></div></div><div class="col-md-2"> <div class="form-group price"> <label for="price_'+ j +'">Price :</label> <input type="number" class="form-control price" id="price_'+ j +'" name="price[]" required> </div></div><div class="col-md-2"> <div class="form-group"> <label for="quantity_'+ j +'">Quantity :</label> <input type="number" class="form-control quantity" id="quantity_'+ j +'" name="quantity[]" required> </div></div><div class="col-md-2"> <div class="form-group"> <label for="minus_item">&nbsp;</label> <button type="button" class="form-control btn btn-danger text-center minus_item" style="border: none !important;"><i class="mdi mdi-minus menu-icon"></i></button> </div></div><div class="col-md-2 text-success product_code" id="product_code_display_'+ j +'">Code : <span id="product_code_show_'+ j +'"></span></div><div class="col-md-2 text-success product_name" id="product_name_display_'+ j +'">Name : <span id="product_name_show_'+ j +'"></span></div><div class="col-md-2 text-success product_category" id="product_category_display_'+ j +'">Category : <span id="product_category_show_'+ j +'"></span></div><div class="col-md-2 text-success product_price" id="product_price_display_'+ j +'">Price : <span id="product_price_show_'+ j +'"></span></div><div class="col-md-2 text-success product_quantity" id="product_quantity_display_'+ j +'">Quantity : <span id="product_quantity_show_'+ j +'"></span></div><div class="col-md-2 text-success product_total_price" id="product_total_price_display_'+ j +'">Total Price : <span class="product_total_price_show" id="product_total_price_show_'+ j +'"></span></div></div>';
             $('#append_item').append(html);
+            calculate();
         })
         $(document).on('input','.code',function(){
             let code = $(this).val();
@@ -254,6 +256,7 @@
                        _('product_quantity_show_' + id).innerHTML = '';
                        _('product_total_price_display_' + id).style.display = 'none';
                        _('product_total_price_show_' + id).innerHTML = '';
+                       calculate();
                    }else{
                        toastr.success("Product Code Matched");
                        jQuery.each( data[1], function( item, value ) {
@@ -274,6 +277,7 @@
             let id = split[1];
             _('product_category_display_' + id).style.display = 'block';
             _('product_category_show_' + id).innerHTML = $(this).val();
+            calculate();
         })
         $(document).on('input','.price',function(){
             let string = $(this).attr('id');
@@ -311,6 +315,7 @@
         });
         $(document).on('click','.minus_item',function(){
            $(this).parent().parent().parent().remove();
+            calculate();
         });
         $(document).on('input','#commission',function(){
             let commission = $(this).val();
@@ -318,12 +323,16 @@
             let after_commission_amount = (amount * commission)/100;
             _('after_commission_amount').value = after_commission_amount;
             calculate();
+        });
+        $(document).on('input','#ban , #packing , #labour , #transport',function(){
+            calculate();
         })
         function calculate(){
         let sum = 0;
         $('.product_total_price_show').each(function(){
             sum += parseFloat($(this).text());
         });
+        _('amount').value = sum;
         let total_amount  = + _('ban').value + + _('packing').value + + _('belt').value + + _('labour').value + + _('transport').value + + _('amount').value + + _('after_commission_amount').value + + _('due').value + + sum;
         _('total_amount').value = total_amount;
         }
